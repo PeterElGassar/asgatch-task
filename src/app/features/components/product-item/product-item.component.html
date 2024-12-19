@@ -1,0 +1,37 @@
+<div >
+    <div class="product-img">
+        <img [src]="product.ProductImg" alt="">
+    </div>
+    <div class="product-info">
+        <p class="product-title" >
+            {{product.ProductName}}
+        </p>
+      
+        <h4>
+            $<span>{{product.ProductPrice}}.00</span>
+        </h4>
+
+        <p class="description">
+            {{product.description}}
+        </p>
+
+        <div class="wish-list-wrapper">
+            <div class="rate">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+
+                <span class="rate-number">
+                    {{product.rating}}
+                </span>
+            </div>
+            <button >
+                <i class="far fa-heart"></i>
+
+                Watch
+            </button>
+        </div>
+    </div>
+</div>
