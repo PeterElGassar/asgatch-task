@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Product } from '@shared/models';
 import { SharedModule } from '@shared/shared.module';
 
 @Component({
@@ -10,7 +11,7 @@ import { SharedModule } from '@shared/shared.module';
   styleUrl: './product-item.component.scss',
 })
 export class ProductItemComponent {
-  @Input() product: any;
+  @Input() product!: Product;
 
   constructor(private router: Router) {}
 
