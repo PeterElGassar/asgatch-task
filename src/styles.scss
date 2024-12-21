@@ -5,7 +5,7 @@
   
   * {
     text-decoration: none;
-    color: #98A2B3;
+    color: #186eff;
   }
   
   p,
@@ -419,11 +419,12 @@
       width: 282px;
       margin: 0.7rem;
       border-radius: 5px;
-
       background: #FFFFFF;
       opacity: 0.9;
-      border: 0.5px solid #424242;
-
+      border: 1px solid #f0f0f0;;
+      
+      transition: all 0.6s;
+      cursor: pointer;
       .product-img {
           height: 257px;
           width: 282px;
@@ -524,5 +525,12 @@
               border: none;
           }
       }
+
+      &:hover{
+        transform: scale(1.008);
+        box-shadow: 0px 2px 15px rgba(59, 69, 123, 0.2), 0px 4px 8px rgba(92, 107, 192, 0.2)
+      }
   }
 }
+
+

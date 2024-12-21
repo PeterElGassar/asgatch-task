@@ -1,0 +1,15 @@
+<a [routerLink]="['/orders',order.OrderId]">
+    <div class="order-table" *ngIf="order ">
+        <div class="order-header">Order ID:</div>
+        <div>{{order.OrderId}}</div>
+
+        <div class="order-header">Order Date:</div>
+        <div>{{order.OrderDate | date:'short'}}</div>
+
+        <div class="order-header">User Name:</div>
+        <div>{{order.User?.Name}}</div>
+
+        <div class="order-header">Payment Type:</div>
+        <div>{{order.PaymentType}}</div>
+    </div>
+</a>

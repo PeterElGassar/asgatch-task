@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { OrderService } from './services/order.service';
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, HttpClientModule],
+  imports: [HttpClientModule],
+  providers: [provideHttpClient()],
 })
 export class CoreModule {}
