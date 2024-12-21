@@ -1,7 +1,7 @@
 
 <div class="filter-parent">
 
-    <div   [ngClass]="{'active': isCategoryOpen}"  class="content-container">
+    <div  (click)="onCategoryOpen()" [ngClass]="{'active': isCategoryOpen}"  class="content-container">
         <div class="question">
             <h4 class="check-list-title">Categories</h4>
 

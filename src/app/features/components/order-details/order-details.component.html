@@ -10,8 +10,11 @@
     <div class="order-header">Order Date:</div>
     <div>{{order.OrderDate | date:'short'}}</div>
 
-    <div class="order-header">User ID:</div>
-    <div>{{order.UserId}}</div>
+    <div class="order-header">User Name:</div>
+    <div>{{order.User?.Name}}</div>
+
+    <div class="order-header">User Address:</div>
+    <div>{{order.User?.Address}}</div>
 
     <div class="order-header">Payment Type:</div>
     <div>{{order.PaymentType}}</div>
@@ -19,12 +22,18 @@
     <div class="order-header">Products:</div>
     <div>
         <div class="products-table">
+            <div class="product-header">Product Img</div>
             <div class="product-header">Product ID</div>
+            <div class="product-header">Product Name</div>
             <div class="product-header">Quantity</div>
             
             <ng-container *ngFor="let product of order.Products">
+                <div class="product-item">
+                    <img class="product-img" [src]="product.ProductImg" alt="">
+                </div>
                 <div class="product-item">{{product.ProductId}}</div>
-                <div class="product-item">{{product.Quantity}}</div>
+                <div class="product-item">{{product.ProductName}}</div>
+                <div class="product-item">{{product.AvailablePieces}}</div>
             </ng-container>
         </div>
     </div>

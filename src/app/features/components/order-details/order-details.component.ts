@@ -16,5 +16,7 @@ export class OrderDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
   ngOnInit(): void {
     this.order = this.route.snapshot.data['orderDetails'];
+
+    console.log(this.order);
   }
 }
