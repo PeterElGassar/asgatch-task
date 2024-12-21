@@ -1,0 +1,31 @@
+
+<div class="order-table" >
+    <a  [routerLink]="['/orders']" class="back-arrow">
+        <img   src="assets/images/up-arrow.png" alt="arrow">
+    </a>
+
+    <div class="order-header">Order ID:</div>
+    <div>{{order.OrderId}}</div>
+
+    <div class="order-header">Order Date:</div>
+    <div>{{order.OrderDate | date:'short'}}</div>
+
+    <div class="order-header">User ID:</div>
+    <div>{{order.UserId}}</div>
+
+    <div class="order-header">Payment Type:</div>
+    <div>{{order.PaymentType}}</div>
+
+    <div class="order-header">Products:</div>
+    <div>
+        <div class="products-table">
+            <div class="product-header">Product ID</div>
+            <div class="product-header">Quantity</div>
+            
+            <ng-container *ngFor="let product of order.Products">
+                <div class="product-item">{{product.ProductId}}</div>
+                <div class="product-item">{{product.Quantity}}</div>
+            </ng-container>
+        </div>
+    </div>
+</div>

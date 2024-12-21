@@ -1,11 +1,11 @@
-import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { SharedModule } from '@shared/shared.module';
 
 @Component({
   selector: 'app-product-item',
   standalone: true,
-  imports: [CommonModule],
+  imports: [SharedModule],
   templateUrl: './product-item.component.html',
   styleUrl: './product-item.component.scss',
 })
